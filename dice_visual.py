@@ -1,4 +1,5 @@
 import plotly.express as px
+import matplotlib.pyplot as plt
 from dice import Dice
 
 die_1 = Dice()
@@ -17,6 +18,7 @@ frequencies = [results.count(value) for value in poss_results]
 #visualize
 title = 'Rusults of rolling two d6, 1000 times'
 label = {'x':'Result', 'y':'Frequeny of Result'}
+
 fig = px.bar(x=poss_results, y=frequencies, title=title, labels=label)
 
 #further visualization
